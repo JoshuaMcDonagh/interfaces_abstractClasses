@@ -1,7 +1,14 @@
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Driveable{
 
     @Override
     public void move() {
-        System.out.println("Car is driving.");
+        drive();
     }
-}
+
+    @Override
+    public void drive() {
+            System.out.println(this.getClass().getSimpleName() + " is driving.");
+        }
+
+    }
+
